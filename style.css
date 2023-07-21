@@ -1,0 +1,443 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.header{
+    width:100%;
+    background-image: linear-gradient(rgba(8, 8, 8, 0.6), rgba(8, 8, 8, 0.5)), url("./image/banner.png");
+    background-size: cover;
+    height: 100vh;
+    background-position: center; 
+    position: relative;                     
+}
+
+.logo img{
+    width: 150px;
+    cursor: pointer;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2%;
+}
+
+.navlinks ul li{
+   list-style: none;
+   display: inline-block;
+   margin: 10px;
+   cursor: pointer;
+}
+
+.navlinks ul li a{
+    color: white;
+    font-size: large;
+ }
+
+ .navlinks ul li::after{
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: red;
+    display: block;
+    margin: auto;
+ }
+
+ .navlinks ul li:hover::after{
+    width: 100%;
+    transition: 0.4s;
+
+ }
+
+.heroText{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: white;
+}
+
+.heroText h1{
+    font-size: 80px;
+}
+
+.heroText p{
+font-size: 20px;
+padding: 20px;
+}
+
+.heroText a{
+    display: inline-block;
+    font-size: 20px;
+    margin-top: 20px;
+    padding: 12px;
+    border: 1px solid rgb(255, 255, 255);
+    color: white;
+    text-decoration: none;
+}
+
+.heroText a:hover{
+    background-color: #FF4500;
+    transition: 0.3s;
+    border-color: rgb(255, 47, 47);
+}
+
+.navlinks fa-solid{
+    /* display: none; */
+    visibility: hidden;
+}
+
+/* ------Responsive------- */
+
+@media only screen and (max-width: 700px) {
+    .navlinks{
+        position: absolute;
+        height: 100vh;
+        width: 50%;
+        background-color: rgba(255, 176, 29, 0.937);
+        z-index: 2;
+        right: -300px;
+        top: 0;
+        transition: 0.3s;
+        transition-duration: 1s;
+     
+}
+
+.navlinks ul{
+    padding: 10%;
+
+}
+.navlinks ul li{
+    display: block;
+    margin: 8%;
+    font-weight: 600;
+    cursor: pointer;
+    
+}
+
+.navlinks fa-solid{
+    font-size: 30px;
+    padding: 15px;
+    display: block;
+    color: white;
+    visibility: visible;
+}
+
+.heroText h1{
+    font-size: 50px;
+}
+
+.heroText{
+    width: 85%;
+}
+
+}
+
+
+/* -----Course----- */
+
+.courseText{
+    padding-top: 100px;
+    width: 85%;
+    margin: auto;
+    text-align: center;
+}
+
+.courseText h1{
+    margin-bottom: 30px;
+    color: black;
+    font-weight: 600;
+    font-size: 50px;
+    
+}
+
+.courseText p{
+    margin-bottom: 30px;
+    color: black;
+    font-weight: 400;
+    font-size: 20px;
+   
+}
+
+.courseArea{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.courseCard{
+    padding: 40px;
+    background-color: rgba(255, 243, 222, 0.7);
+    margin: 10px 20px 15px 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+    box-sizing: border-box;
+
+}
+.courseCard h2{
+    padding: 20px;
+
+}
+.courseCard p{
+    font-weight: 100;  
+}
+
+.courseCard:hover{
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (max-width:600px) {
+    .courseArea{
+flex-direction: column;
+width: 99%;
+    }
+}
+
+.campusSection{
+    padding-top: 70px;
+    width: 85%;
+    margin: auto;
+    text-align: center;
+}
+
+.campusSection h1{
+     margin-bottom: 30px;
+    color: black;
+    font-weight: 600;
+    font-size: 50px;
+}
+
+.campusSection p{
+    margin-bottom: 30px;
+    color: black;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.campusImg{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: center;
+}
+
+.cities{
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    
+}
+.cities img{
+    border-radius: 20px; 
+    position: relative;
+    width: 100%;
+    display: block;
+}
+
+.layer{
+    position: absolute;
+    background: transparent;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* border: 1px solid #FF4500; */
+    border-radius: 20px;
+    transition: 0.5s;
+
+}
+
+.layer:hover{
+    background: rgba(255, 71, 50, 0.7);
+}
+
+.layer h2{
+    bottom: 0;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    font-weight: 500;
+    color: #fff;
+    font-size: 25px;
+    transition: 0.4s;
+    opacity: 0;
+}
+
+.layer:hover h2{
+    bottom: 45%;
+    opacity: 1;
+}
+
+@media only screen and (max-width:700px) {
+   .campusImg{
+    flex-direction: column;
+   }
+}
+
+.facilities{
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+
+.facility{
+    flex-basis: 30%;
+    margin: 5px 20px 40px 20px;
+    
+
+}
+
+.facility img{
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.facility h3{
+    width: 90%; 
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
+.facility p{
+ width: 90%;
+ margin-left: 5px;  
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media only screen and (max-width:700px) {
+    .facilities{
+        flex-direction: column;
+    }
+}
+
+.client .fa-solid{
+    color: rgb(234, 0, 0);
+}
+
+.clientSection{
+    display: flex;
+    justify-content: center;
+    width: 95%;
+    margin: auto;
+    gap: 50px;
+}
+
+.clientCard img{
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+}
+
+.clientCard{
+    width: 600px;
+    display: flex;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: rgba(255, 243, 222, 0.7);
+}
+
+.client{
+    margin: 0px 0px 0px 20px;
+}
+
+.client p{
+    margin: 0px;
+    padding: 0px;
+}
+
+.client .fa-solid, h4{
+    margin-top: 20px;
+    font-weight:600 ;
+}
+
+@media screen and (max-width:700px) {
+    .clientSection{ 
+        flex-direction: column;    
+    }
+    .clientCard{
+        width:95%;
+        margin: auto;
+    }
+   
+}
+
+.visitImg{
+    background-image: linear-gradient(rgba(12,12,12,0.6), rgba(12,12,12,0.6)), url("./image/banner2.jpg");
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 80%;
+    padding: 150px;
+    border-radius: 20px;
+    margin: 60px auto;
+    text-align: center;
+    color: #fff;
+
+}
+.visitImg h1{
+    font-size: xx-large;
+    margin-bottom: 2%;
+}
+.visitImg p{
+    font-size: medium;
+    margin-bottom: 5%;
+}
+
+.btn{
+    padding: 15px 40px 15px 40px;
+    background:transparent;
+    color: #fff;
+    border: none;
+    border: 1px solid #ffffff;
+    transition: 0.3s;
+    border-radius: 5px;  
+}
+
+.btn:hover{
+    background-color: #FF4500;
+    border: none;
+}
+
+
+@media only screen and (max-width:700px) {
+    .visitImg {
+        width: 90%;
+        text-align: center;
+        font-size: 10px;
+        padding: 8%;
+        height: 380px;
+    }
+    .visitImg h1{
+        font-size: 35px;
+        margin-bottom: 8%;
+    }
+    .visitImg p{
+        font-size: medium;
+        margin-bottom: 15%;
+    }
+}
+
+.footer{
+    text-align: center;
+    color: black;
+    margin-bottom: 30px;
+}
+
+.footer h2, .footer p{
+    padding: 10px;
+    width: 70%;
+    margin: auto;
+}
+
+.fa-brands {
+    color: #ed3f00;
+    margin: 10px;
+}
